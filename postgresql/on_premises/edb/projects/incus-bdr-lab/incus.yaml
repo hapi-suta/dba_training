@@ -1,0 +1,32 @@
+# Lima configuration for PostgreSQL BDR Lab Environment
+# This creates a Linux VM with containerd/nerdctl for running PostgreSQL containers
+
+# Use Ubuntu 24.04 LTS
+images:
+  - location: "https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.04-server-cloudimg-arm64.img"
+    arch: "aarch64"
+  - location: "https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.04-server-cloudimg-amd64.img"
+    arch: "x86_64"
+
+# VM resources - adjust as needed
+cpus: 4
+memory: "8GiB"
+disk: "50GiB"
+
+# Mount the project directory
+mounts:
+  - location: "~/Desktop/dba_training"
+    writable: true
+
+# Message after VM starts
+message: |
+  PostgreSQL BDR Lab VM is ready!
+  
+  To use:
+    limactl shell incus-lab
+    
+  Then start containerd:
+    sudo systemctl start containerd
+    
+  See LAB-GUIDE.md for full setup instructions.
+
