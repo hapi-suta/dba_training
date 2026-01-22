@@ -20,6 +20,19 @@ This directory contains learning materials, exercises, and projects for PostgreS
 - **scripts/** - SQL scripts and code snippets
   - Reusable queries, setup scripts, and utilities
 
+- **cloud/** - Cloud platform-specific PostgreSQL
+  - **aws/** - Amazon RDS for PostgreSQL / Aurora PostgreSQL
+  - **gcp/** - Google Cloud SQL for PostgreSQL
+  - **azure/** - Azure Database for PostgreSQL
+  
+- **on_premises/** - On-premises PostgreSQL distributions
+  - **open_source/** - Standard PostgreSQL (Community Edition)
+  - **edb/** - EnterpriseDB Postgres Advanced Server
+  - **citus/** - Citus (distributed PostgreSQL)
+  - **greenplum/** - Greenplum Database
+  - **timescaledb/** - TimescaleDB (time-series)
+  - **postgis/** - PostGIS (spatial/geographic)
+
 ## Getting Started
 
 1. Start with topics in the `topics/` directory
